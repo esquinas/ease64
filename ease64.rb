@@ -4,4 +4,8 @@ module Ease64
   def encode64(bin)
     'HH' # TODO
   end
+
+  def decode64(str)
+    'A' # TODO
+  end
 end
