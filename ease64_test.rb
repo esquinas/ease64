@@ -1,10 +1,10 @@
 require 'minitest/autorun'
-require 'minitest/proud'
+require 'minitest/pride'
 require_relative 'ease64'
 
 class Ease63Test < Minitest::Test
   def test_encode_one_char
-    skip
+    # skip
     enc = Ease64.encode64('A')
     assert_equal 'HH', enc
   end
