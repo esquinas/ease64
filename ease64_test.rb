@@ -21,8 +21,8 @@ class Ease63Test < Minitest::Test
     assert_equal 'A', plain
   end
 
-  def test_decpde_word
-    # skip
+  def test_decode_word
+    skip
     plain = Ease64.encode64('IAeMalMx')
     assert_equal 'Hello', plain
   end
