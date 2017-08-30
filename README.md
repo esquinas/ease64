@@ -1,6 +1,6 @@
 # Ease64 (alpha). Base64 for humans
 
-Ease64 is a [Base64](https://en.wikipedia.org/wiki/Base64 "Base64 in the English Wikipedia") alternative that can be encoded/decoded by humans hands. This means: no error-prone math operations like addition (uuencode) and no arbitrary look-up tables.
+Ease64 is a [Base64](https://en.wikipedia.org/wiki/Base64 "Base64 in the English Wikipedia") alternative that can be encoded/decoded by hand. This means: no error-prone math operations like addition (uuencode) and no arbitrary look-up tables. All that's needed is a regular ASCII-octal table for both encoding and decoding.
 
 Look at the code or wait until I finish writing this README.
 
