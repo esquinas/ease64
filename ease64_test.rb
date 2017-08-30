@@ -71,16 +71,16 @@ class Ease63Test < Minitest::Test
 
   def test_unicode
     # skip
-    plain = 'Example'
-    plain.force_encoding('ASCII-8BIT')
+    plain = "Two robots: 🤖\u{1f916}"
     enc = Ease64.encode64(plain)
     assert_equal Encoding::UTF_8, Ease64.decode64(enc).encoding
+    assert_equal plain, Ease64.decode64(enc)
   end
 
   def test_handle_data
     data = ''
     256.times { data.concat rand(256).chr }
     enc = Ease64.encode64(data)
-    assert_equal data, Ease64.decode64(enc)
+    assert_equal data.force_encoding('UTF-8'), Ease64.decode64(enc)
   end
 end
