@@ -4,12 +4,17 @@ Ease64 is a [Base64](https://en.wikipedia.org/wiki/Base64 "Base64 in the English
 
 Look at the code or wait until I finish writing this README.
 
+<!-- ## Usage -->
+
+
+<!-- ## Motivation -->
+
+
 ## Current Version
-v0.0.0 alpha (unstable!)
+v0.0.1 alpha
 
 ## TODO:
-- Write more tests, get to a stable version.
-- Solve edge cases, i.e. `"\x00\x00\x00\x00"`.
-- Explain *motivation* in this Readme.
 - Add  *Usage* to this Readme.
+- Explain *motivation* in this Readme.
+- Explain how to encode/decode Ease64 by hand.
 - Write down some ideas where Ease64 can be used.
