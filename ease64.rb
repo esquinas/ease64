@@ -24,7 +24,7 @@ module Ease64
     }.join
 
     three_digit_octals = octals_blob.scan(/..?.?/)
-    three_digit_octals.pop if three_digit_octals.last.oct ==  0
+    three_digit_octals.pop if three_digit_octals.last ==  '0'
 
     result = three_digit_octals.map { |ooo| ooo.oct.chr }
 
