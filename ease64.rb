@@ -2,7 +2,7 @@ module Ease64
   module_function
 
   def encode64(bin)
-    octals_blob = bin.bytes.map { |byte| byte.to_s(8) }.join
+    octals_blob = bin.bytes.map { |byte| byte.to_s(8).rjust(3, '0') }.join
 
     # TODO: Optimize! if octals_blob.length % ?? ...
     two_digit_octals = octals_blob.scan(/..?/).map { |octa|
