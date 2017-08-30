@@ -12,7 +12,7 @@ module Ease64
 
     result = two_digit_octals.map do |oo|
       num = oo.oct
-      (num < 63) ? (num + 64).chr : num.chr
+      (num < 63) ? (num + 64).chr('UTF-8') : num.chr('UTF-8')
     end
 
     result.join.force_encoding('UTF-8')
@@ -27,7 +27,7 @@ module Ease64
     three_digit_octals = octals_blob.scan(/..?.?/)
     three_digit_octals.pop if three_digit_octals.last ==  '0'
 
-    result = three_digit_octals.map { |ooo| ooo.oct.chr }
+    result = three_digit_octals.map { |ooo| (ooo.oct & 255).chr }
 
     result.join.force_encoding('UTF-8')
   end

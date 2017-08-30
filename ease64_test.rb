@@ -29,6 +29,12 @@ class Ease63Test < Minitest::Test
     assert_equal 'Hello', plain
   end
 
+  def test_decode_anything
+    # skip
+    plain = Ease64.decode64('anything')
+    assert_equal "\r\xB9\xA5)t\a", plain
+  end
+
   # ### ENCODE + DECODE TESTS
 
   def test_handle_one_null_char
@@ -59,6 +65,7 @@ class Ease63Test < Minitest::Test
     # skip
     plain = 'áéíóúâêîôûäëïöüâàèìòùñ¡'
     enc = Ease64.encode64(plain)
+    assert_equal plain.encoding, Ease64.decode64(enc).encoding
     assert_equal plain, Ease64.decode64(enc)
   end
 
@@ -68,5 +75,12 @@ class Ease63Test < Minitest::Test
     plain.force_encoding('ASCII-8BIT')
     enc = Ease64.encode64(plain)
     assert_equal Encoding::UTF_8, Ease64.decode64(enc).encoding
+  end
+
+  def test_handle_data
+    data = ''
+    256.times { data.concat rand(256).chr }
+    enc = Ease64.encode64(data)
+    assert_equal data, Ease64.decode64(enc)
   end
 end
