@@ -54,4 +54,19 @@ class Ease63Test < Minitest::Test
     enc = Ease64.encode64(ascii_string)
     assert_equal ascii_string, Ease64.decode64(enc)
   end
+
+  def test_handle_accents
+    # skip
+    plain = 'áéíóúâêîôûäëïöüâàèìòùñ¡'
+    enc = Ease64.encode64(plain)
+    assert_equal plain, Ease64.decode64(enc)
+  end
+
+  def test_unicode
+    # skip
+    plain = 'Example'
+    plain.force_encoding('ASCII-8BIT')
+    enc = Ease64.encode64(plain)
+    assert_equal Encoding::UTF_8, Ease64.decode64(enc).encoding
+  end
 end

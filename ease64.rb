@@ -1,3 +1,4 @@
+# encoding: UTF-8
 module Ease64
   module_function
 
@@ -14,7 +15,7 @@ module Ease64
       (num < 63) ? (num + 64).chr : num.chr
     end
 
-    result.join
+    result.join.force_encoding('UTF-8')
   end
 
   def decode64(str)
@@ -28,6 +29,6 @@ module Ease64
 
     result = three_digit_octals.map { |ooo| ooo.oct.chr }
 
-    result.join
+    result.join.force_encoding('UTF-8')
   end
 end
