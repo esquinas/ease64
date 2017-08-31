@@ -23,7 +23,7 @@ Now separate the octets in groups of two, add one zero at the end if needed:
 
 `11  51  41  15  60`
 
-Then, go back to the same ASCII table and look up your two octets between the characters. As you see, most values are three octets long. The key here is to ignore the third octect from the right. With some values, you will have more than one character to choose. That's fine.
+Then, go back to the same ASCII table and look up your two octets. As you see, most values are three octets long. The key here is to ignore the third octet from the right. With some values, you will have more than one character to choose from. That's fine.
 
 
 | Octal  | Character              | Other option         |
@@ -37,11 +37,9 @@ Then, go back to the same ASCII table and look up your two octets between the ch
 
 Finally, put every character together into a string. Every one of the next eight results are 100% **ease64** valid and decode back to "`Man`". Use whichever you prefer:
 
-| `IiaMp`  | `IiaM0`  |
-|:--------:|:--------:|
-| `I)aMp`  | `I)aM0`  |
-| `Ii!Mp`  | `Ii!M0`  |
-| `I)!Mp`  | `I)!M0`  |
+      IiaMp      IiaM0      I)aMp     I)aM0
+      Ii!Mp      Ii!M0      I)!Mp     I)!M0
+
 
 ## Example
 
@@ -84,7 +82,5 @@ $ irb -r './ease.rb'
 v0.0.1 alpha
 
 ## TODO:
-- Add  *Usage* to this Readme.
 - Explain *motivation* in this Readme.
-- Explain how to encode/decode Ease64 by hand.
 - Write down some ideas where Ease64 can be used.
