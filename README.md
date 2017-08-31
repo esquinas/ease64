@@ -2,7 +2,7 @@
 
 Ease64 is a [Base64](https://en.wikipedia.org/wiki/Base64 "Base64 in the English Wikipedia") alternative that can be encoded/decoded by hand. This means: no error-prone math operations like addition (uuencode) and no arbitrary look-up tables. All that's needed is a regular ASCII-octal table for both encoding and decoding.
 
-Look at the code or wait until I finish writing this README.
+Continue reading this Readme or look at the code and tests.
 
 ## Encoding by hand
 
@@ -14,7 +14,7 @@ Then, look up every character and write down their octal values:
   + `a` → 141<sub>(8)</sub>
   + `n` → 156<sub>(8)</sub>
 
-Put every digit ([octet](https://en.wikipedia.org/wiki/Octet_(computing), actually) together:
+Put every digit ([octet](https://en.wikipedia.org/wiki/Octet_(computing), actually)) together:
 
 `115141156`
 
