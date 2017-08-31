@@ -14,7 +14,7 @@ Then, look up every character and write down their octal values:
   + `a` → 141<sub>(8)</sub>
   + `n` → 156<sub>(8)</sub>
 
-Put every digit ([octet](https://en.wikipedia.org/wiki/Octet_(computing), actually)) together:
+Put every digit ([octet](https://en.wikipedia.org/wiki/Octet_%28computing%29),  actually) together:
 
 `115141156`
 
