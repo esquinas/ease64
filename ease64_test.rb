@@ -1,9 +1,9 @@
 require 'minitest/autorun'
-require 'minitest/pride' # Optional, can be commented out.
+require 'minitest/pride' # Optional.
 require_relative 'ease64'
 
 class Ease63Test < Minitest::Test
-  # ### ENCODE TESTS
+  # ENCODE TESTS
   def test_encode_one_char
     # skip
     enc = Ease64.encode64('A')
@@ -16,7 +16,7 @@ class Ease63Test < Minitest::Test
     assert_equal 'IAeMalMx', enc
   end
 
-  # ### DECODE TESTS
+  # DECODE TESTS
   def test_decode_one_char
     # skip
     plain = Ease64.decode64('HH')
@@ -35,7 +35,7 @@ class Ease63Test < Minitest::Test
     assert_equal "\r\xB9\xA5)t\a", plain
   end
 
-  # ### ENCODE + DECODE TESTS
+  # ENCODE + DECODE TESTS
 
   def test_handle_one_null_char
     # skip
@@ -78,6 +78,7 @@ class Ease63Test < Minitest::Test
   end
 
   def test_handle_data
+    # skip
     data = ''
     256.times { data.concat rand(256).chr }
     enc = Ease64.encode64(data)
