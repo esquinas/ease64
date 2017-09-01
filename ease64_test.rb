@@ -2,7 +2,7 @@ require 'minitest/autorun'
 require 'minitest/pride' # Optional.
 require_relative 'ease64'
 
-class Ease63Test < Minitest::Test
+class Ease64Test < Minitest::Test
   # ENCODE TESTS
   def test_encode_one_char
     # skip
@@ -83,5 +83,16 @@ class Ease63Test < Minitest::Test
     256.times { data.concat rand(256).chr }
     enc = Ease64.encode64(data)
     assert_equal data.force_encoding('UTF-8'), Ease64.decode64(enc)
+  end
+
+  def test_handle_arbitrary_sized_data
+    # skip
+    16.times do |i|
+      data = ''
+      i.times { data.concat rand(256).chr }
+      enc = Ease64.encode64(data)
+      assert_equal data.force_encoding('UTF-8'), Ease64.decode64(enc),
+        "Ease64 should handle data of size #{i}."
+    end
   end
 end
