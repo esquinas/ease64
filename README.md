@@ -2,7 +2,7 @@
 
 Ease64 is a [Base64](https://en.wikipedia.org/wiki/Base64 "Base64 in the English Wikipedia") alternative that can be encoded/decoded by hand. This means: no error-prone math operations like addition (uuencode) and no arbitrary look-up tables. All that's needed is a regular ASCII-octal table for both encoding and decoding.
 
-Continue reading this Readme or look at the code and tests.
+For more, continue reading this or look at the tests.
 
 ## Encoding by hand
 
@@ -23,7 +23,7 @@ Now separate the octets in groups of two, add one zero at the end if needed:
 
 `11  51  41  15  60`
 
-Then, go back to the same ASCII table and look up your two octets. As you see, most values are three octets long. The key here is to ignore the third octet from the right. With some values, you will have more than one character to choose from. That's fine.
+Then, go back to the same ASCII table and look up your two octets. As you see, most values are three octets long. The key here is to ignore the third octet from the right. In some cases, you will have more than one character to choose from. That's fine.
 
 
 | Octal  | Character              | Other option         |
@@ -51,7 +51,7 @@ Finally, put every character together into a string. Every one of the next eight
 
 All three examples decode back to `Hello World!`. Why?
 
-Unlike Base64, for any value that you want to encode, you can choose between different characters as long as they follow this rule: its octal value must share the two last digits.
+Unlike Base64, for any value that you want to encode, you can choose between different characters as long as they follow this rule: its octal value must share the last two digits. Be careful with text encodings if you get very fancy and start using emojis, special characters and the like.
 
 ## Usage
 
