@@ -82,5 +82,6 @@ $ irb -r './ease.rb'
 v0.0.1 alpha
 
 ## TODO:
+- Handle Unicode characters properly so emojis can be used (using `String#codepoints`?)
 - Explain *motivation* in this Readme.
 - Write down some ideas where Ease64 can be used.
