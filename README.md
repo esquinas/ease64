@@ -35,7 +35,7 @@ Then, go back to the same ASCII table and look up your two octets. As you see, m
 | 60     | → `p` 160<sub>(8)</sub>  | → `0` 060<sub>(8)</sub> |
 
 
-Finally, put every character together into a string. Every one of the next eight results are 100% **ease64** valid and decode back to "`Man`". Use whichever you prefer:
+Finally, put every character together into a string. Each one of the next eight results are 100% **ease64** valid and decode back to "`Man`". Use whichever you prefer:
 
       IiaMp      IiaM0      I)aMp     I)aM0
       Ii!Mp      Ii!M0      I)!Mp     I)!M0
